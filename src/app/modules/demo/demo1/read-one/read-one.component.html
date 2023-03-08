@@ -1,0 +1,19 @@
+<br>
+
+<div *ngIf="selectedAnimal != undefined">
+  <h4>El {{selectedAnimal.name}}ito</h4>
+  <ul>
+    <li>Race : {{selectedAnimal.race}}</li>
+    <li>Robe : {{selectedAnimal.coat}}</li>
+    <li>Date de naissance : {{selectedAnimal.birthdate | date : 'dd/MM/yyyy'}}</li>
+    <li>Proprietaire : {{selectedAnimal.owner}}</li>
+  </ul>
+</div>
+
+<div *ngIf="selectedAnimal == undefined">
+  <h3>Animal Non trouvé</h3>
+</div>
+
+<a routerLink="../">retour</a>
+
+

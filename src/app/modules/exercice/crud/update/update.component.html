@@ -1,0 +1,38 @@
+<br>
+<a routerLink="/exercice/crud/all">retour</a>
+<h4>Modifier Article</h4>
+
+<form [formGroup]="updateForm" (ngSubmit)="submit()">
+
+  <label>Nom</label>
+  <br>
+  <input type="text" formControlName="name">
+
+  <br>
+
+  <label>Categorie</label>
+  <br>
+  <input type="text" formControlName="cat">
+
+  <br>
+
+  <label>Prix</label>
+
+  <br>
+  <input type="number" formControlName="price">
+
+  <br>
+
+  <label>Description</label><br>
+  <textarea cols="30" rows="10" formControlName="desc"></textarea>
+
+  <br>
+
+  <label>Note</label>
+  <br>
+  <input type="number" formControlName="note">
+  <br>
+
+  <button [disabled]="!updateForm.valid">Modifier</button>
+
+</form>

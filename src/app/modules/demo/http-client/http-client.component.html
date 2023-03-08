@@ -1,0 +1,29 @@
+<div *ngIf="errorMessage">
+  <h1 style="color : 'red'">{{errorMessage}}</h1>
+</div>
+<div *ngIf="!errorMessage">
+
+  <div>
+    <h1>Mon Pokemon</h1>
+
+    <h2>{{monPokemon.name}}</h2>
+
+    <h4>ID : {{monPokemon.id}}</h4>
+
+    <h4>Hauteur : {{monPokemon.height}} cm</h4>
+
+    <h4>Poids : {{monPokemon.weight}} Kg</h4>
+
+    <h4>Experience de base : {{monPokemon.base_experience}} XP</h4>
+
+    <p *ngFor="let stat of monPokemon.stats">
+      {{stat.stat.name}}
+    </p>
+  </div>
+
+
+  <app-stats-pokemon [stats]="monPokemon.stats" ></app-stats-pokemon>
+
+</div>
+
+

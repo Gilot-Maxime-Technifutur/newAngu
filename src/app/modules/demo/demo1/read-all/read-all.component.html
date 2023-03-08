@@ -1,0 +1,12 @@
+<br>
+
+<h4>Animals
+</h4>
+
+
+<br>
+<ul>
+  <li *ngFor="let animal of animals">
+    <p>{{animal.name}} - {{animal.race}} - <a [routerLink]="['./', animal.id]">Consulter</a></p>
+  </li>
+</ul>

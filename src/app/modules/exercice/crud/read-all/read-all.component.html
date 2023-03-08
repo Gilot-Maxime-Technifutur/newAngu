@@ -1,0 +1,14 @@
+<br>
+<a routerLink="/exercice/crud/create">Ajouter</a>
+<br>
+
+<ul>
+  <li *ngFor="let art of articles">
+    <h4>{{art.name}}</h4>
+    <p>Prix : {{art.price}}💲</p>
+    <p>Note : <span *ngFor="let i of [].constructor(art.note)">⭐</span></p>
+    <a [routerLink]="['../read', art.id]">Details</a> &nbsp;
+    <a [routerLink]="['../update', art.id]">Modifier</a> &nbsp;
+    <a [routerLink]="['../delete', art.id]">Supprimer</a> &nbsp;
+  </li>
+</ul>

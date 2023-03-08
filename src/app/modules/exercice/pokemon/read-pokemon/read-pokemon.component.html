@@ -1,0 +1,13 @@
+<h4>{{monPokemon.name}}</h4>
+
+<p>{{monPokemon.weight}} Kg</p>
+
+<p>{{monPokemon.height}} Cm</p>
+
+<img [src]="monPokemon.sprites.front_default" alt="">
+
+<app-types-pokemon [types]="monPokemon.types" ></app-types-pokemon>
+
+<app-stats-pokemon [stats]="monPokemon.stats" ></app-stats-pokemon>
+
+

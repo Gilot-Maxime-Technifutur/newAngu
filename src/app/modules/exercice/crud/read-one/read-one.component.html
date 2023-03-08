@@ -1,0 +1,33 @@
+<br>
+<a routerLink="/exercice/crud/all">retour</a>
+
+<div *ngIf="article">
+
+
+  <h1>{{article.name}}</h1>
+  <ul>
+    <li>
+      <h3>Prix : {{article.price}} </h3>
+    </li>
+    <li>
+      <h3>Categorie : {{article.cat}}</h3>
+    </li>
+    <li>
+      <h3>Description : {{article.desc}}</h3>
+    </li>
+    <li>
+      <h3>Note : <span *ngFor="let i of [].constructor(article.note)">⭐</span></h3>
+    </li>
+    <li>
+      <h3>Date de creation : {{article.creationDate | date : 'dd/MM/yyyy'}}</h3>
+    </li>
+  </ul>
+    <a [routerLink]="['../../update', article.id]">Modifier</a> &nbsp;
+    <a [routerLink]="['../../delete', article.id]">Supprimer</a> &nbsp;
+</div>
+
+<div *ngIf="!article">
+  <h1>NOT FOUND BWO</h1>
+</div>
+
+
